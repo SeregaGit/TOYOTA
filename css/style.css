@@ -1,0 +1,617 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main_wrap{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.logo_menu_block{
+    background: url("../img/background_menu.png");
+    height: 100px;
+    background-repeat: repeat-x;
+
+
+}
+
+/*Стили для Лого и Инфо для лого*/
+.logo_info{
+    display: inline-block;
+}
+.logo_img{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 8px;
+    background-image: url("../img/toyota_logo_min.png");
+    width: 100px;
+    height: 83px;
+}
+.info_for_logo{
+    display: inline-block;
+    color: #ca3e38;
+
+    font-size: 24px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 300;
+}
+
+/*Стили для меню*/
+.menu{
+    display: inline-block;
+
+}
+
+.list_point{
+    display: inline-block;
+    margin-left: 8px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.links{
+    font-size: 30px;
+
+    text-decoration: none;
+
+    color: black;
+
+    font-family: helveticaneuecyrthin, sans-serif;
+    font-weight: 300;
+
+    transition: .2s;
+}
+
+.links:hover{
+    color: #ca3e38;
+}
+
+.links::after   {
+    content: '';
+    width: 36px;
+    height: 1px;
+    border-bottom: 1px solid #ca3e38;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    margin-left: -19px;
+}
+
+.drop_down_list   {
+    position: absolute;
+    list-style: none;
+    left: -18%;
+    top: 95%;
+    display: none;
+}
+.drop_down-li    {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    background-image: url("../img/background_menu.png");
+}
+.drop_down_link  {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 10px 0 6px 0;
+    font-family: helveticaneuecyrthin, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+.drop_down_link:hover   {
+    background-color: rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+
+
+.list_point:hover .drop_down_list  {
+    display: block;
+}
+
+
+/*Стили для блока "Toyota drive the dream"*/
+.background_Toyota_dream_block{
+    background-image: url("../img/maim_background.jpg");
+    height: 837px;
+    background-size: cover;
+}
+
+.text_Toyota_dream{
+    font-family: helveticaneuecyrbold, sans-serif;
+    font-size: 99px;
+    color: white;
+    padding-top: 127px;
+    width: 67%;
+    margin-bottom: 75px;
+    text-align: left;
+}
+
+.red_word{
+    color: #fe372f;
+}
+
+
+
+
+
+
+
+.button_show_hide{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 220px;
+    border: 1px solid white;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    background: rgba(255,245,215,.5);
+    height: 28px;
+    width: 70px;
+    transition: 1s;
+}
+/* скрываем чекбоксы и блоки с содержанием */
+.hide, .hide + label ~ .block_social {
+    display: none;
+}
+/* вид текста label */
+.hide + label,
+.hide:checked + label {
+    padding: 0;
+    background: url("../img/left_show.png");
+    background-position: 17px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    }
+/* вид текста label при активном переключателе */
+.hide:checked + label {
+    background: url("../img/right_hide.png");
+    background-position: 17px;
+    background-repeat: no-repeat;
+}
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + .block_social {
+    background: rgba(255,245,215,.5);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 250px;
+    width: 25%;
+    text-align: left;
+    padding-left: 73px;
+    border: 1px solid white;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+
+}
+
+.button_show_hide:hover{
+    background-position: 12px;
+}
+
+
+.join_us_text    {
+    font-family: helveticaneuecyrmedium,sans-serif;
+    font-size: 16px;
+    margin: 22px 0 20px 0;
+    font-weight: 700;
+}
+.join_us_mod    {
+    margin-top: 20px;
+    position: relative;
+}
+.join_us_mod::before    {
+    content: url("../img/phone_for_social.png");
+    width: 19px;
+    height: 19px;
+    vertical-align: middle;
+    position: absolute;
+    left: -6%;
+}
+.social_link    {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/sprite_social_original.png");
+    margin-right: 15px;
+}
+.social_link:hover  {
+    background-image: url("../img/sprite_social-hover.png");
+    transition: 0.2s;
+}
+.socials-p  {
+    color: #c6a0b5;
+    font-size: 20px;
+}
+
+/*Социальные сети и стили для них*/
+.face_book_link {
+    background-position: -7px;
+}
+.google_plus_link {
+    background-position: -47px;
+}
+.linkedin_link {
+    background-position: -91px;
+}
+.vk_link {
+    background-position: -135px;
+    margin-right: 0;
+}
+
+
+
+.mark_list{
+    display: inline-block;
+    width: calc(50% - 30px);
+    vertical-align: top;
+    padding-bottom: 125px;
+
+}
+.numerous_list_mod{
+    margin-left: 50px;
+}
+.list{
+    list-style: square;
+    position: relative;
+    line-height: 1.5;
+}
+
+.item {
+    font-family: helveticaneuecyrmedium, sans-serif;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+
+}
+
+
+
+.title_mark_list{
+    color: #810500;
+    font-size: 36px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+
+}
+.title_numerous_list{
+    color: #810500;
+    font-size: 21px;
+    font-family: "Myriad Pro", sans-serif;
+    font-weight: 300;
+
+    margin: 0  0 20px 0;
+}
+
+
+
+.list_color_red{
+    counter-reset: myCounter;
+    line-height: 1.5;
+}
+.item_color_red  {
+    list-style: none;
+    position: relative;
+    font-size: 15px;
+    text-align: left;
+    color: white;
+    font-family: helveticaneuecyrmedium, sans-serif;
+}
+.item_color_red:before {
+    counter-increment: myCounter;
+    content:counter(myCounter);
+    color: #fe372f;
+    position: absolute;
+    left: -5%
+}
+
+
+
+/*Слайдер*/
+
+#iview  {
+    position: relative;
+    height: 595px;
+}
+#iview-timer  {
+    display: none !important;
+}
+.iview-prevNav  {
+    width: 24px;
+    height: 81px;
+    background-image: url("../img/left-arrow.png");
+    top: 50%;
+    left: 10%;
+}
+.iview-nextNav  {
+    width: 24px;
+    height: 81px;
+    background-image: url("../img/right-arrow.png");
+    top: 50%;
+    right: 10%;
+}
+.iviewSlider    {
+    background-size: cover !important;
+    background-position: 50% 75% !important;
+}
+.cover   {
+    background-size: cover !important;
+    background-position: 50% 75% !important;
+}
+.iview-strip    {
+    background-size: cover !important;
+    background-position: 50% 75% !important;
+}
+.caption-contain {
+
+    width: 458px !important;
+    height: 182px !important;
+    background-image: url("../img/text_pic_slide.png");
+    background-repeat: repeat;
+}
+.iview-caption  {
+    margin: 65px 0 0 40px;
+    width: 458px !important;
+    height: 182px !important;
+}
+
+
+/*-------------------------------------------------------*/
+
+.mgn_top{
+    margin: 30px 0 70px 0;
+}
+
+/*Тест-драйв форма и стили для нее*/
+
+form{
+    display: inline-block;
+    width: 48%;
+}
+.title_p_test_drive{
+    font-size: 36px;
+    font-family: helveticaneuecyrthin, sans-serif;
+    color: #fe372f;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+#name   {
+    display: block;
+    width: 286px;
+    height: 30px;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+#datepicker{
+    display: block;
+    width: 91px;
+    height: 30px;
+    padding: 4px 4px 4px 40px;
+    margin: 10px 19px 20px 0;
+    font-size: 15px;
+}
+
+.date::before{
+    content: url("../img/calendar.png");
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    margin: 40px 10px;
+    cursor: pointer;
+}
+
+.date-select,
+.time-select{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.time{
+    display: block;
+    margin-bottom: 10px;
+}
+
+#datepicker,
+#name,
+#hour,
+#minutes{
+
+    border: none;
+}
+
+
+
+#hour,
+#minutes    {
+    width: 64px;
+    height: 38px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../img/input-arrow.png");
+    background-repeat: no-repeat;
+    background-position: 35px center;
+    padding-left: 6px;
+    font-size: 15px;
+    cursor: pointer;
+
+}
+
+#datepicker,
+#name,
+.border{
+    border: 1px solid #999999;
+}
+
+
+
+/*Стили для выбора модели*/
+
+.list_cars{
+    list-style: none;
+}
+
+.select_link{
+    margin: 5px 5px;
+}
+
+input[type=submit] {
+    background-image: url("../img/button_arrow.png");
+    background-repeat: no-repeat;
+    width: 275px;
+    height: 40px;
+    background-color: #fe4a44;
+    background-position: 20px;
+    font-size: 24px;
+    font-family: helveticaneuecyrmedium, sans-serif;
+    color: white;
+    border: none;
+    border-radius: 1px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+input,
+select  {
+    outline: none;
+}
+
+input:required:focus {
+    border: 1px solid red !important;
+    outline: none;
+}
+input:required:valid  {
+    border: 1px solid green !important;
+}
+
+select:required:focus{
+    border: 1px solid red !important;
+}
+select:required:valid  {
+    border: 1px solid green !important;
+}
+
+/*Стили для блока отзывы*/
+
+.reviews{
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+}
+
+.bxslider   {
+    list-style: none;
+}
+
+.icon_sub{
+    display: inline-block;
+    background: url("../img/pic.jpg");
+    height: 252px;
+    width: 238px;
+    border: 2px solid #C1C1C1;
+}
+.text_comment{
+    display: inline-block;
+    height: 120px;
+    width: 198px;
+    border: 2px solid #C1C1C1;
+    vertical-align: top;
+}
+.text_comment::before{
+    content: url("../img/for_comment.png");
+    height: 60px;
+    width: 56px;
+    position: absolute;
+    top: 116px;
+    left: 233px;
+}
+
+.text_span{
+    font-size: 20px;
+    color: #999999;
+    font-family: helveticaneuecyrmedium, cursive;
+}
+
+.text_comment {
+    color: #fe372f;
+    font-size: 33px;
+    line-height: .8;
+    padding: 5px;
+}
+
+.who_stay_comment_p{
+    font-size: 18px;
+    color: #999999;
+    font-family: helveticaneuecyrmedium, sans-serif;
+}
+
+/*Футер*/
+
+.bgdc{
+    background-color: black;
+}
+
+.copyrights {
+    text-align: left;
+    padding: 27px 0 35px 0;
+    font-family: helveticaneuecyrmedium, sans-serif;
+    font-size: 12px;
+    color: white;
+    display: inline-block;
+}
+
+.copyrights-mod {
+    float: right;
+    margin-right: 40px;
+    position: relative;
+    text-decoration: underline;
+}
+.copyrights-mod::after  {
+    content: url("../img/footer-logo.png");
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    right: -45%;
+    top: 26%;
+}
+
+@media screen and (min-width: 1024px) {
+
+    .main_wrap {
+        width: 960px;
+    }
+    .text_Toyota_dream{
+        font-size: 109px;
+    }
+    .list{
+        margin-left: 22px;
+    }
+
+}
+@media screen and (min-width: 1150px) {
+
+    .main_wrap {
+        width: 1024px;
+    }
+    .list_point{
+        margin-left: 20px;
+    }
+
+}
+@media screen and (min-width: 1366px) {
+
+    .main_wrap {
+        width: 1150px;
+    }
+    .list_point{
+        margin-left: 28px;
+    }
+
+}
